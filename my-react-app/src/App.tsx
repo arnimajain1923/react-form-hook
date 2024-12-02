@@ -1,10 +1,11 @@
 
 import './App.css'
-import Select from './components/Select.tsx'
+import Select from './Select.tsx'
 
 function App() {
 
   return (
+   
   <Select/>
  )
 }

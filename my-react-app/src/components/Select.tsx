@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { joiResolver } from "@hookform/resolvers/joi";
 import Joi from "joi";
 import React from "react";
+import { DevTool } from "@hookform/devtools";
 
 
 
@@ -37,6 +38,7 @@ const Select: React.FC = () => {
     handleSubmit,
     formState: { errors },
     reset,
+    control
   } = useForm<FormData>({
     resolver: joiResolver(schema), // Connect Joi validation
   });
@@ -96,8 +98,10 @@ const Select: React.FC = () => {
       </div>
 
       <button type="submit">Submit</button>
+      <DevTool control={control} />
     </form>
     </div>
+    
   );
 };
 

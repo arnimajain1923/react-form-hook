@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "esnext",                  // Modern JS support
+    "module": "esnext",                // Node.js uses CommonJS
+    "rootDir": "./src",                  // Source files directory
+    "outDir": "./dist",                  // Output directory
+    "strict": true,                      // Enable strict mode
+    "esModuleInterop": true,             // Allow ES Module imports
+    "skipLibCheck": true,                // Skip type checks for libraries
+    "forceConsistentCasingInFileNames": true, // Enforce consistent casing
+    "moduleResolution": "node"
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],                   // Include source files
+  "exclude": ["node_modules"]            // Exclude unnecessary files
+}

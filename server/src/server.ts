@@ -47,12 +47,12 @@ const validationSchema = Joi.object({
 });
 
 // API endpoint to handle form submissions
-app.post("/submit", async (req, res) => {
+app.post("/submit", async (req:any, res:any) => {
   try {
     // Validate request data using Joi
     const { error } = validationSchema.validate(req.body, { abortEarly: false });
     if (error) {
-      const errorMessages = error.details.reduce((acc, curr) => {
+      const errorMessages = error.details.reduce((acc :any, curr:any) => {
         acc[curr.path[0]] = curr.message;
         return acc;
       }, {});
